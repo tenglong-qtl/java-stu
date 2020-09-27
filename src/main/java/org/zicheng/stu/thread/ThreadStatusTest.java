@@ -9,7 +9,7 @@ public class ThreadStatusTest {
 
     public static void testStatusNEW(){
         System.out.println(new Thread(() -> {
-
+            System.out.println(Thread.currentThread().getName());
         }).getState());
     }
 
