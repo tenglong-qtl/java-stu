@@ -1,6 +1,4 @@
-package org.zicheng.stu.thread;
-
-import com.sun.xml.internal.ws.api.pipe.Pipe;
+package org.zicheng.stu.thread.basis;
 
 import java.io.IOException;
 import java.io.PipedReader;

@@ -1,4 +1,4 @@
-package org.zicheng.stu.thread;
+package org.zicheng.stu.thread.basis;
 
 /**
  * 线程优先级 1~10 default 5

@@ -1,4 +1,4 @@
-package org.zicheng.stu.thread;
+package org.zicheng.stu.thread.basis;
 
 /**
  * Java线程状态
