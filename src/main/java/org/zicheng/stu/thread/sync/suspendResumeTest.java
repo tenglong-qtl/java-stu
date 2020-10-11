@@ -19,7 +19,7 @@ public class suspendResumeTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().getName() + Thread.currentThread().getState());
         thread.resume();
     }
 
@@ -46,6 +46,6 @@ public class suspendResumeTest {
     }
 
     public static void main(String[] args) {
-        suspendResumeTest.deadLock();
+        suspendResumeTest.simple();
     }
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.BlockingQueue;
  * Since: 2020-10-11 21:25
  */
 public class ProducerConsumerModelTest {
-    private static ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(1);
+    private static final ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(1);
 
     private static void execute() {
         // consumer
