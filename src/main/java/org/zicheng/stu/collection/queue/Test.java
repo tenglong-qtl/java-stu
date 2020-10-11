@@ -10,13 +10,6 @@ import java.util.concurrent.BlockingQueue;
  */
 public class Test {
     public static void main(String[] args) {
-        List<Integer> integerList = new ArrayList<>();
-        integerList.add(1);
-        integerList.add(1);
-        integerList.add(1);
 
-        for(Integer i : integerList){
-            System.out.println(i);
-        }
     }
 }

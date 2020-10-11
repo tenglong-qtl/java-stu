@@ -3,6 +3,7 @@ package org.zicheng.stu.collection.queue.iter;
 import java.util.Iterator;
 
 /**
+ * 自定义一个可迭代集合
  * Author: zicheng
  * Since: 2020-10-11 21:54
  */
