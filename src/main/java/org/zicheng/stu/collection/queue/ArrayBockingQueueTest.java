@@ -46,8 +46,55 @@ public class ArrayBockingQueueTest {
         }
     }
 
+    // 抛出异常
+    public void testRemove(){
+        for (int i = 0; i < 10; i++) {
+            queue.remove();
+        }
+    }
+
+    public void testPoll(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println(queue.poll());
+        }
+    }
+
+    // 阻塞
+    public void testTake(){
+        for (int i = 0; i < 10; i++) {
+            try {
+                queue.take();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void testPollTime(){
+        for (int i = 0; i < 10; i++) {
+            try {
+                System.out.println(queue.poll(1000L,TimeUnit.MILLISECONDS));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // 检查元素 抛出异常
+    public void testElement(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println(queue.element());
+        }
+    }
+
+    public void testPeek(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println(queue.peek());
+        }
+    }
+
     public static void main(String[] args) {
         ArrayBockingQueueTest test = new ArrayBockingQueueTest();
-        test.testOfforTime();
+        test.testPeek();
     }
 }
