@@ -70,6 +70,7 @@ public class ArrayBockingQueueTest {
         }
     }
 
+    // 有就直接返回，没有就等待一段时间再返回
     public void testPollTime(){
         for (int i = 0; i < 10; i++) {
             try {
@@ -95,6 +96,7 @@ public class ArrayBockingQueueTest {
 
     public static void main(String[] args) {
         ArrayBockingQueueTest test = new ArrayBockingQueueTest();
-        test.testPeek();
+        test.testOffer();
+        test.testPollTime();
     }
 }
