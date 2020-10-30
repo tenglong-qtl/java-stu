@@ -12,6 +12,7 @@ import java.util.concurrent.BlockingQueue;
  */
 public class BlockingQueueTest {
     private BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(1);
+    private Object object = new Object();
 
     public void producer() {
         new Thread(new Runnable() {
@@ -46,15 +47,18 @@ public class BlockingQueueTest {
 
     }
 
-    public static void main(String[] args) {
-        BlockingQueueTest queueTest = new BlockingQueueTest();
-        queueTest.producer();
-        try {
-            Thread.sleep(500L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public void test() {
+        synchronized (object) {
+            // some code
         }
-        queueTest.consumer();
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 1000000; i++) {
+            new Thread(() -> {
+                System.out.println(Thread.currentThread().getName());
+            }).start();
+        }
     }
 
 }
