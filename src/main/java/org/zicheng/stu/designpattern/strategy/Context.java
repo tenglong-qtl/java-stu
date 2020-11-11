@@ -1,10 +1,15 @@
 package org.zicheng.stu.designpattern.strategy;
 
 /**
+ * 封装角色
+ * 持有抽象策略角色的引用
  * Author: T.L. QIU
  * Date: 2020-11-11 10:01.
  */
 public class Context {
+    /**
+     * 抽象策略角色
+     */
     private Strategy strategy;
 
     public Context(Strategy strategy) {
