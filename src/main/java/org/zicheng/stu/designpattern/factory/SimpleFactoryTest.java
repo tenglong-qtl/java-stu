@@ -12,6 +12,9 @@ public class SimpleFactoryTest {
     }
 }
 
+/**
+ * 工厂类角色
+ */
 class HuaweiFactory {
     public static Huawei create(int type) {
         if (type == 30) {
@@ -25,23 +28,36 @@ class HuaweiFactory {
     }
 }
 
+/**
+ * 抽象产品角色
+ */
 class Huawei {
     public Huawei() {
     }
 }
 
+
+/**
+ * 具体产品角色
+ */
 class HuaweiP30 extends Huawei {
     public HuaweiP30() {
         System.out.println("HuaweiP30");
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class HuaweiP20 extends Huawei {
     public HuaweiP20() {
         System.out.println("HuaweiP20");
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class HuaweiP40Pro extends Huawei {
     public HuaweiP40Pro() {
         System.out.println("HuaweiP40Pro");

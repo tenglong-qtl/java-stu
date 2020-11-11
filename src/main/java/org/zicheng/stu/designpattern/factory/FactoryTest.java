@@ -15,10 +15,16 @@ public class FactoryTest {
     }
 }
 
+/**
+ * 抽象工厂角色
+ */
 abstract class IpadFactory {
     public abstract Ipad create();
 }
 
+/**
+ * 具体工厂角色
+ */
 class IpadProFactory extends IpadFactory {
 
     @Override
@@ -27,6 +33,9 @@ class IpadProFactory extends IpadFactory {
     }
 }
 
+/**
+ * 具体工厂角色
+ */
 class IpadAirFactory extends IpadFactory {
 
     @Override
@@ -35,6 +44,9 @@ class IpadAirFactory extends IpadFactory {
     }
 }
 
+/**
+ * 具体工厂角色
+ */
 class IpadMiniFactory extends IpadFactory {
 
     @Override
@@ -43,24 +55,35 @@ class IpadMiniFactory extends IpadFactory {
     }
 }
 
-
+/**
+ * 抽象产品角色
+ */
 class Ipad {
     public Ipad() {
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class IpadAir4 extends Ipad {
     public IpadAir4() {
         System.out.println("IpadAir4");
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class IpadPro extends Ipad {
     public IpadPro() {
         System.out.println("IpadPro");
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class IpadMini extends Ipad {
     public IpadMini() {
         System.out.println("IpadMini");
