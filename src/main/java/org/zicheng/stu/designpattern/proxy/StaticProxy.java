@@ -1,6 +1,7 @@
 package org.zicheng.stu.designpattern.proxy;
 
 /**
+ * 静态代理
  * Author: zicheng
  * Since: 2020-11-13 23:17
  * Description:
@@ -12,7 +13,9 @@ public class StaticProxy {
     }
 }
 
-
+/**
+ * 代理角色和真实角色都继承或实现同一个接口
+ */
 interface ISubject {
     void request();
 }
@@ -25,10 +28,15 @@ class RealSubject implements ISubject {
     }
 }
 
-
+/**
+ * 代理角色持有真实角色的引用
+ */
 class ProxySubject implements ISubject {
     private ISubject realSubject = null;
 
+    /**
+     * 进行一系列附加操作
+     */
     @Override
     public void request() {
         preRequest();
