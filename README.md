@@ -17,6 +17,12 @@
 
 ## 代理模式
     静态代理：https://zhuanlan.zhihu.com/p/62534874
+    缺 jdk动态代理
+    缺 cglib动态代理
+    
+## 命令模式
+
+## 
     
    
 
