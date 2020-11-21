@@ -1,5 +1,6 @@
 package org.zicheng.stu.thread.lock;
 
+import java.sql.SQLOutput;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -58,14 +59,28 @@ public class LockTest {
         }
     }
 
+    public void testLockInterruptibly() {
+        try {
+            myLock.lockInterruptibly();
+            try {
+                System.out.println(Thread.currentThread().getName() + "冲冲冲");
+            } finally {
+                myLock.unlock();
+            }
+        } catch (InterruptedException e) {
+            System.out.println(Thread.currentThread().getName() + "竞争锁中途被中断了");
+        }
+    }
+
     public static void main(String[] args) {
         LockTest lockTest = new LockTest();
         new Thread(() -> {
 //            lockTest.testLock();
 //            lockTest.testTryLock();
-            lockTest.testTryLockWait();
+//            lockTest.testTryLockWait();
+            lockTest.testLockInterruptibly();
         }).start();
-        lockTest.testTryLockWait();
+        lockTest.testLockInterruptibly();
     }
 
 }
