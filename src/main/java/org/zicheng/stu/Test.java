@@ -1,16 +1,22 @@
 package org.zicheng.stu;
 
 /**
- * Author: T.L. QIU
- * Date: 2020-11-13 9:59.
+ * Author: zicheng
+ * Since: 2020-11-14 17:22
+ * Description:
  */
 public class Test {
-    private static final Test instance = new Test();
+    public static void main(String[] args) {
 
-    private Test() {
-    }
-
-    public static Test getInstance() {
-        return instance;
+        for (int i = 0; i < 100000000; i++) {
+            new Thread(() -> {
+                System.out.println(Thread.currentThread().getName() + " created");
+                try {
+                    Thread.sleep(10000000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
     }
 }
