@@ -1,6 +1,5 @@
 package org.zicheng.stu.thread.lock;
 
-import java.sql.SQLOutput;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -74,13 +73,13 @@ public class LockTest {
 
     public static void main(String[] args) {
         LockTest lockTest = new LockTest();
-        new Thread(() -> {
+//        new Thread(() -> {
 //            lockTest.testLock();
-//            lockTest.testTryLock();
-//            lockTest.testTryLockWait();
-            lockTest.testLockInterruptibly();
-        }).start();
-        lockTest.testLockInterruptibly();
+////            lockTest.testTryLock();
+////            lockTest.testTryLockWait();
+////            lockTest.testLockInterruptibly();
+//        }).start();
+        lockTest.testTryLockWait();
     }
 
 }

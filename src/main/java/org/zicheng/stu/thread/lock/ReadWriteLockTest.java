@@ -13,6 +13,10 @@ public class ReadWriteLockTest {
     private boolean needUpdate = true;
     private Object data;
 
+
+    /**
+     * 锁升级
+     */
     public void updateCache() {
         readWriteLock.readLock().lock();
         if (needUpdate) {
