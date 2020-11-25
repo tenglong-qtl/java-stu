@@ -31,10 +31,19 @@ public class ReadWriteLockTest {
 
     }
 
+    /**
+     * 不支持锁升级
+     */
+    public void lockUpdate() {
+        readWriteLock.readLock().lock();
+        System.out.println(Thread.currentThread().getName() + "得到读锁");
+        readWriteLock.writeLock().lock();
+        System.out.println(Thread.currentThread().getName() + "得到写锁");
+    }
+
     public static void main(String[] args) {
         ReadWriteLockTest lockTest = new ReadWriteLockTest();
-        lockTest.updateCache();
-        lockTest.updateCache();
-
+//        lockTest.updateCache();
+        lockTest.lockUpdate();
     }
 }
